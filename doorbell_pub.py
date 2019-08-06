@@ -18,7 +18,7 @@ print("Starting\n")
 
 client = paho.Client()
 client.on_publish = on_publish
-client.connect("192.168.0.214", 1883)
+client.connect("192.168.0.252", 1883)
 logging.info('Connected')
 print("Connected\n")
 client.loop_start()
