@@ -10,4 +10,4 @@ COPY doorbell_pub.py ./
 # Enable udevd so that plugged dynamic hardware devices show up in our container.
 ENV UDEV=1
 
-CMD ["python", "-u", "src/doorbell_pub.py"]
+CMD ["python", "-u", "doorbell_pub.py"]
