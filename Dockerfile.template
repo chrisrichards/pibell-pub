@@ -1,6 +1,6 @@
 FROM balenalib/raspberrypi3-python
 
-RUN pip install paho-mqtt
+RUN pip install logging paho-mqtt serial time
 
 COPY doorbell_pub.py /app
 
