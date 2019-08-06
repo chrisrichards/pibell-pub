@@ -14,13 +14,13 @@ def on_publish(client, userdata, mid):
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
 # logging.basicConfig(filename='doorbell.log',level=logging.DEBUG,format='%(asctime)s %(message)s')
 logging.info('Starting')
-print "Starting\n"
+print("Starting\n")
 
 client = paho.Client()
 client.on_publish = on_publish
 client.connect("192.168.0.214", 1883)
 logging.info('Connected')
-print "Connected\n"
+print("Connected\n")
 client.loop_start()
 
 last_msg_time = time.time()
