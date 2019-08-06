@@ -1,0 +1,7 @@
+FROM balenalib/raspberrypi3-python
+
+RUN pip install paho-mqtt
+
+COPY doorbell_pub.py /app
+
+CMD ["python", "/app/doorbell_pub.py"]
