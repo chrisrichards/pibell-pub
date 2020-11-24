@@ -27,7 +27,8 @@ last_msg_time = time.time()
 
 ser = serial.Serial(DEVICE, BAUD)
 while True:
-	msg = ser.read(12)
+	raw = ser.read(12)
+	msg = raw.decode('utf-8')
 	logging.info('Received msg:' + msg)
 
 	now = time.time() 
