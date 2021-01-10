@@ -23,6 +23,8 @@ logging.info('Connected')
 print("Connected\n")
 client.loop_start()
 
+client.publish("home/doorbell/online", "1", qos=1)
+
 last_msg_time = time.time()
 
 ser = serial.Serial(DEVICE, BAUD)
